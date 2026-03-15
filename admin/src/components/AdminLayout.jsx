@@ -57,7 +57,8 @@ const NAV_GROUPS = [
 
 function SidebarNav({ collapsed }) {
   return (
-    <nav className="flex-1 px-2 py-3 overflow-y-auto space-y-4">
+    // <nav className="flex-1 px-2 py-3 overflow-y-auto space-y-4">
+    <nav class="flex-1 px-2 py-3 overflow-y-auto space-y-4 sidebar-scroll">
       {NAV_GROUPS.map(group => (
         <div key={group.label}>
           {!collapsed && (
