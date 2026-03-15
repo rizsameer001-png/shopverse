@@ -18,21 +18,24 @@ services:
 
     envVars:
       - key: CLIENT_URL
-        value: https://shopverse-server-sfvj.onrender.com/api/v1
+        value: https://shopverse-client.onrender.com
 
       - key: ADMIN_URL
-        value: https://shopverse-server-sfvj.onrender.com/api/v1
+        value: https://shopverse-admin-9t5r.onrender.com
 
       # ── Database ─────────────────────────────────────────────
       - key: MONGO_URI
         value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
 
-      # ── JWT Auth ─────────────────────────────────────────────
+      # JWT Auth
       - key: JWT_SECRET
-        value: your-very-secret-key-here
+        value: 9d7f3a2b8c4e1f6a5d0b9c7e3f2a1d8c6e4f5b7a
 
-      - key: JWT_EXPIRATION
-        value: 86400000
+      - key: JWT_EXPIRE
+        value: 30d
+
+      - key: JWT_COOKIE_EXPIRE
+        value: 30
 
 
   # ── Admin Dashboard ──────────────────────────────────────────
