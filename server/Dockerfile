@@ -12,12 +12,12 @@ RUN npm install --production
 COPY . .
 
 # Set environment variables (optional defaults, can be overridden on Render)
-ENV PORT=8080
+ENV PORT=10000
 ENV NODE_ENV=production
 ENV MONGO_URI=mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse?appName=Cluster0
 
 # Expose server port
-EXPOSE 8080
+EXPOSE 10000
 
 # Start the server in production mode
 CMD ["npm", "start"]
