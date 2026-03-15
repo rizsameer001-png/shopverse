@@ -27,7 +27,7 @@ services:
         value: https://shopverse-client.onrender.com
 
       - key: ADMIN_URL
-        value: https://shopverse-admin.onrender.com
+        value: https://shopverse-admin-9t5r.onrender.com
 
       # ── Database ─────────────────────────────────────────────
       - key: MONGODB_URI
@@ -57,7 +57,7 @@ services:
 
     envVars:
       - key: VITE_API_URL
-        value: https://shopverse-server.onrender.com
+        value: https://shopverse-server-sfvj.onrender.com
 
   # ── Client Frontend (Customer Store) ─────────────────────────
   - type: web
@@ -72,4 +72,4 @@ services:
 
     envVars:
       - key: VITE_API_URL
-        value: https://shopverse-server.onrender.com
+        value: https://shopverse-server-sfvj.onrender.com
