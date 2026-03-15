@@ -13,13 +13,10 @@ services:
     plan: free
     region: singapore
     branch: main
-    healthCheckPath: /actuator/health
+    healthCheckPath: /health
     autoDeploy: true
 
     envVars:
-      - key: PORT
-        value: 10000
-
       - key: CLIENT_URL
         value: https://shopverse-client.onrender.com
 
@@ -30,12 +27,9 @@ services:
       - key: MONGO_URI
         value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
 
-      - key: MONGO_URI
-        value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
-
       # ── JWT Auth ─────────────────────────────────────────────
       - key: JWT_SECRET
-        value: "your-very-secret-key-here"
+        value: your-very-secret-key-here
 
       - key: JWT_EXPIRATION
         value: 86400000
@@ -55,6 +49,7 @@ services:
     envVars:
       - key: VITE_API_URL
         value: https://shopverse-server-sfvj.onrender.com
+
 
   # ── Client Frontend (Customer Store) ─────────────────────────
   - type: web
