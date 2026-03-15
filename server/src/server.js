@@ -1,7 +1,7 @@
 // Load env vars
 require('dotenv').config();
 const express = require('express');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -47,6 +47,9 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
+app.get('/', (req, res) => {
+  res.send('shopverse Ecommerce API Running 🚀');
+});
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
