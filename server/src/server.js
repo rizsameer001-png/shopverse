@@ -1,3 +1,5 @@
+// Load env vars
+dotenv.config();
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -7,8 +9,7 @@ const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 
-// Load env vars
-dotenv.config();
+
 
 // Connect to database
 connectDB();
