@@ -9,7 +9,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1';
+// const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1';
+const BASE = import.meta.env.VITE_API_URL || 'https://shopverse-server-sfvj.onrender.com/api/v1';
 
 /* ─── Axios instance ─────────────────────────────────────────────
    Token is injected via setAdminStore() called from main.jsx AFTER

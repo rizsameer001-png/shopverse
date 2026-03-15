@@ -11,7 +11,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://shopverse-server-sfvj.onrender.com/api/v1',
         changeOrigin: true,
       },
     },

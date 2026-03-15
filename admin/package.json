@@ -12,13 +12,14 @@
     "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.2",
     "chart.js": "^4.4.1",
+    "cors": "^2.8.6",
+    "lucide-react": "^0.303.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
-    "lucide-react": "^0.303.0",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
