@@ -30,10 +30,10 @@ services:
         value: https://shopverse-admin-9t5r.onrender.com
 
       # ── Database ─────────────────────────────────────────────
-      - key: MONGODB_URI
+      - key: MONGO_URI
         value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
 
-      - key: SPRING_DATA_MONGODB_URI
+      - key: MONGO_URI
         value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
 
       # ── JWT Auth ─────────────────────────────────────────────

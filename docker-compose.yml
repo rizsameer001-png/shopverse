@@ -20,7 +20,7 @@ services:
         value: https://shopverse-client.onrender.com
       - key: ADMIN_URL
         value: https://shopverse-admin-9t5r.onrender.com
-      - key: MONGODB_URI
+      - key: MONGO_URI
         value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse?appName=Cluster0
       - key: JWT_SECRET
         value: "your-very-secret-key-here"
