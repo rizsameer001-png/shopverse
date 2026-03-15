@@ -1,9 +1,12 @@
+# ---------- Build Stage ----------
 FROM node:20-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+
+# Use legacy-peer-deps to bypass strict peer conflicts
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
