@@ -15,7 +15,7 @@ services:
     autoDeploy: true
     envVars:
       - key: PORT
-        value: 8080
+        value: 10000
       - key: CLIENT_URL
         value: https://shopverse-client.onrender.com
       - key: ADMIN_URL
