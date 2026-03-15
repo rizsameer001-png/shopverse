@@ -1,0 +1,75 @@
+# ───────────────────────────────────────────────────────────────
+# render.yaml — ShopVerse Infrastructure as Code
+# ───────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Backend API (Server) ─────────────────────────────────────
+  - type: web
+    name: shopverse-server
+    runtime: docker
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: ./server
+    plan: free
+    region: singapore
+    branch: main
+    healthCheckPath: /actuator/health
+    autoDeploy: true
+
+    envVars:
+      - key: PORT
+        value: 8080
+
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+      - key: CLIENT_URL
+        value: https://shopverse-client.onrender.com
+
+      - key: ADMIN_URL
+        value: https://shopverse-admin.onrender.com
+
+      # ── Database ─────────────────────────────────────────────
+      - key: MONGODB_URI
+        value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
+
+      - key: SPRING_DATA_MONGODB_URI
+        value: mongodb+srv://rizsameer001_db_user:apyzUNvvS0p0318K@cluster0.xbnnnsq.mongodb.net/shopverse
+
+      # ── JWT Auth ─────────────────────────────────────────────
+      - key: JWT_SECRET
+        value: "your-very-secret-key-here"
+
+      - key: JWT_EXPIRATION
+        value: 86400000
+
+
+  # ── Admin Dashboard ──────────────────────────────────────────
+  - type: web
+    name: shopverse-admin
+    runtime: docker
+    dockerfilePath: ./admin/Dockerfile
+    dockerContext: ./admin
+    plan: free
+    region: singapore
+    branch: main
+    autoDeploy: true
+
+    envVars:
+      - key: VITE_API_URL
+        value: https://shopverse-server.onrender.com
+
+  # ── Client Frontend (Customer Store) ─────────────────────────
+  - type: web
+    name: shopverse-client
+    runtime: docker
+    dockerfilePath: ./client/Dockerfile
+    dockerContext: ./client
+    plan: free
+    region: singapore
+    branch: main
+    autoDeploy: true
+
+    envVars:
+      - key: VITE_API_URL
+        value: https://shopverse-server.onrender.com
